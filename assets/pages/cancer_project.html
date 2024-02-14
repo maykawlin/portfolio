@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--==============================UNICONS=============================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    
+    <!--==============================SWIPER CSS=============================-->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+
+    
+    <!--============================== CSS =============================-->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Cancer Project</title>
+</head>
+<body>
+    <!--==============================HEADER=============================-->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Maycon K. S. A. E L.</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="../../index.html#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../../index.html#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../../index.html#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../../index.html#qualification" class="nav__link">
+                            <i class="uil uil-university nav__icon"></i> Qualifications
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../../index.html#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> Portfolio
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../../index.html#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==============================CONTENT=============================-->
+    <main class="main">
+        <section class="content__section section" id="content__cancer">
+
+            <h1 class="section__title">Cancer Project</h1>
+            <span class="section__subtitle content">Exploring and analysing cancer data</span>
+            <!-- <span class="section__subtitle date">August 22, 2023</span> -->
+
+            <div class="home__container container grid" id="home__cancer">
+                <img src="../img/cancer_project.jpg" alt="" class="content__img">
+            </div>
+
+            <div class="content_abstract content container" id="abstract">
+                <h2>Abstract</h2>
+
+                <p>Understanding cancer has never been more crucial than it is today. Cancer ranks among the top causes of death worldwide, making it a huge concern. Figuring out the ins and outs of cancer doesn't just add to our medical knowledge; it also helps shape how we approach healthcare rules, treatments, and how well patients do.</p>
+                <p>Digging into different aspects of cancer, gives us a better idea of how it works. This info boosts the creation of better tools to diagnose it, new and smart treatments, and ways to personalize care for each patient. Plus, by cracking the code of cancer, we could catch it early, which makes a big difference in treatment success.</p>
+                <p>We've got resources like Kaggle, a data hub, that lets scientists and data experts team up to study cancer data together. Using math and AI, we can find hidden patterns, connections, and clues that were impossible to spot in the heaps of data before.</p>
+                <p>This examination is based on data gathered from the Kaggle repository <a target="_blank" href="https://www.kaggle.com/datasets/erdemtaha/cancer-data"><ins>(Cancer data)</ins> </a>. In this study, we will delve into the morphometric characteristics of tumors. We will establish connections between these features and a designated target attribute, namely diagnosis, which is categorized into benign and malignant classes. Subsequently, a classification model will be constructed to discern instances of cancer.</p>
+            </div>
+
+            <div class="content__container content container" id="dataset">
+                <h2>Dataset explanation</h2>
+
+                <h4>Attribute Information:</h4>
+                <ul>
+                    <li>1. id</li>
+                    <li>2. diagnosis (M=Malignant, B=Benign)</li>
+                </ul>
+
+                <h4>Morphometric Features:</h4>
+                <ul>
+                    <li>a. radius (measure from the center of the tumor util the border)</li>
+                    <li>b. texture (standard deviation of gray-scale values)</li>
+                    <li>b. perimeter (measure of a turn around of the tumor border)</li>
+                    <li>c. area</li>
+                    <li>d. smoothness mean (how much the surface is rough or smooth)</li>
+                    <li>e. compactness (perimeter^2 / area - 1.0)</li>
+                    <li>f. concavity (severity of concave points along the nuclear border)</li>
+                    <li>g. concave points (number of concave points along the nuclear border)</li>
+                    <li>h. symmetry</li>
+                    <li>i. fractal dimension (“coastline approximation” - 1)</li>
+                </ul>
+
+                <div class="obs">
+                    <p>OBS.: Coastline approximation is a concept in fractal geometry that refers to the process of estimating the fractal dimension of a complex and irregular shape.</p>
+                </div>
+                
+
+                <p>As stated by our analysis, the most tumors are benign. One reason for that is the immune system actively monitors and targets abnormal cells. Benign tumors are less likely to evade the immune response due to their less aggressive nature, allowing the immune system to keep them in check.</p>
+
+                <img src="../img/cancer_project/benign-malignant-frequency.png" alt="">
+
+                <blockquote class="blockquote" cite="https://en.wikipedia.org/wiki/Benign_tumor">
+                    <p>
+                        <i>"A benign tumor is a mass of cells (tumor) that does not invade neighboring tissue or metastasize (spread throughout the body, like
+                    malignant). Compared to malignant (cancerous) tumors, benign tumors generally have a slower growth rate. Benign tumors have relatively well differentiated
+                    cells. They are often surrounded by an outer surface (fibrous sheath of connective tissue) or stay contained within the epithelium. Common examples of 
+                    benign tumors include moles and uterine fibroids." </i>
+                    <a target="blank_" href='https://en.wikipedia.org/wiki/Benign_tumor'>
+                        <ins>(Benign tumor)</ins>
+                    </a>
+                    </p>
+                </blockquote>
+
+                <p>If you notice any of these symptoms bellow, as advised by Harvard University  <a target="_blank" href="https://www.health.harvard.edu/newsletter_article/the-10-commandments-of-cancer-prevention">(Cancer Prevention)</a>, it's important to consult a doctor:</p>
+                <blockquote>
+                    <ul class="list__blockquote">
+                        <li>C: Change in bowel or bladder habits</li>
+                        <li>A: A sore that does not heal</li>
+                        <li>U: Unusual bleeding or discharge</li>
+                        <li>T: Thickening or lump in the breast or elsewhere</li>
+                        <li>I: Indigestion or difficulty in swallowing</li>
+                        <li>O: Obvious change in a wart or mole</li>
+                        <li>N: Nagging cough or hoarseness</li>
+                    </ul>
+                </blockquote>
+                <p>Another information we can use is looking to the means of each feature when is a malignant or benig tumor. In the table bellow, the mean of the most features are high for the malignant diagnosis. Which is an acceptable assumption when a malignant tumor is more agressive and try to replicate wildly.</p>
+
+                <img src="../img/cancer_project/mean_diagnosis-1.png" alt="">
+                
+                <p>Looking the table we can see some features are not different in their means. The means are 'fractal_dimension_mean', 'texture_se', 'smoothness_se','symmetry_se' and 'fractal_dimension_se'. This features will be dropped. Now we must see the relation between the features by using pearson correlation. The table bellow show theirs relation. The values are between -1 and 1, where -1 indicate anticorrelation, 0 are not correlated and 1 are very correlated.
+                </p>
+
+                <img src="../img/cancer_project/correlation.png" alt="" width="4000" id="cancer-correlation-img">
+
+                <p>Looking in another way we have features highly correlated:</p>
+
+                <ul>
+                    <li>a. radius_mean - perimeter_mean, area_mean, concave_points</li>
+                    <li>b. compacteness - concavity_mean, concave_points</li>
+                </ul>
+
+                <p>Now we will make a scatter plot to se the relation between them and at the same time separate by diagnosis classes:</p>
+                <img src="../img/cancer_project/correlated_features_1.png" alt="" width="4000" >
+                <img src="../img/cancer_project/correlated_features_2.png" alt="" width="500" >
+                
+                <p>We can see clearly that there is a vertical line in each graph that separates the class diagnosis. The information that we can get from it is, the higher the radius, perimeter, area, compactness, concavity and number of concave points, more likely to be a malignant tumor.</p>
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!--==============================FOOTER=============================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Maycon</h1>
+                    <span class="footer__subtitle">Data Scientist</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="../../index.html#qualification" class="footer__link">Qualifications</a>
+                    </li>
+                    <li>
+                        <a href="../../index.html#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="../../index.html#contact" class="footer__link">Contact Me</a>
+                    </li>
+                </ul>
+
+
+                <div class="footer__socials">
+                    <a href="https://www.instagram.com/mayconkawlin/" target="_blank" class="footer__social">
+                        <i class="uil uil-instagram-alt"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/maycon-kawlin/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Bedimcode. All right reserved</p>
+        </div>
+    </footer>
+
+    <!--==============================SCROLL TOP=============================-->
+    <a href="../pages/cancer_project.html" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scroll__icon"></i>
+    </a>
+
+
+    <!--==============================SWIPER JS=============================-->
+
+    <script src="../js/swiper-bundle.min.js"></script>
+
+    <!--==============================MAIN JS=============================-->
+    <script src="../js/main.js"></script>
+</body>
+</html>
